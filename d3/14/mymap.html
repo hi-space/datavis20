@@ -7,9 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <style>
+            
+            h1 {
+                font-family: 'Do Hyeon', sans-serif;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        </style>
         <!-- 브라우저 탭 상단에 보일 페이지 이름을 넣으세요 -->
-        <title>Title</title>
+        <title>전국 푸드트럭 허가구역 지도</title>
     </head>
 
     <body>
@@ -33,9 +41,19 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-
-
-
+                    <h1>타코야끼가 땡길때</h1>
+                    <p>
+                        우리집 근처 푸드트럭존은 어디일까? 전국 푸드트럭 지도에서 확인해보세요.
+                        <br>데이터 소스: <a href = "https://www.data.go.kr/data/15028208/standard.do">전국 푸드트럭 허가구역 표준데이터</a></br>
+                    </p>
+                    
+                    <div>
+                        <object data="./korea-foodtruck.html" width="800" height="600">
+                            <embed src="./korea-foodtruck.html" width="800" height="600"> </embed>
+                            Error: Embedded data could not be displayed.
+                        </object>
+                        <!-- <iframe src="./korea-foodtruck.html" style="width:100%; height:800px;">
+                        </iframe> -->
                 </div>
             </div>
         </div>
