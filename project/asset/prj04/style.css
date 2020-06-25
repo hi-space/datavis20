@@ -1,0 +1,52 @@
+
+
+body {
+    font-family: 'Noto Serif KR', serif;
+    height: 3000px;
+}
+
+body h1#header {
+    text-align: center;
+    font-weight: 600;
+}
+
+#teammate {
+    text-align: center;
+}
+
+.section-header {
+    font-weight: 900;
+    text-align: right;
+}
+
+.graph {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.mid-header {
+    margin-bottom: 16px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.section {
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.image {
+    margin-bottom: 60px;
+}
+
+.chart {
+    margin-bottom: 60px;
+}
+
+.subtitle {
+    color: #343a4061;
+}
+
+.section-divider {
+    padding-top: 60px;
+}
