@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="font.css"-->
+    <style media="screen">
+      @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+      html,body {font-family:NanumSquare !important;}
+    </style>
+    <style media="screen">
+      button{
+      background:#1AAB8A;
+      color:#fff;
+      border:none;
+      position:relative;
+      height:30px;
+      font-size:1em;
+      padding:0 2em;
+      cursor:pointer;
+      transition:800ms ease all;
+      outline:none;
+      }
+      button:hover{
+      background:#fff;
+      color:#1AAB8A;
+      }
+      button:before,button:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #1AAB8A;
+      transition:400ms ease all;
+      }
+      button:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+      }
+      button:hover:before,button:hover:after{
+      width:100%;
+      transition:800ms ease all;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 style = 'margin-top:50px; margin-bottom:10px; text-align:left; font-size:xx-large;font-weight: bold;font-family:'>
+            코로나사태 이후 경제 지표 변화 - 국내
+          </h1>
+        </div>
+      </div>
+      <p style = " font-size:0.75em;  color: gray;">
+        최종 업로드 시간 | 2020-06-25 15:00 | 고주희, 박주은, 이자은, 이건희
+      </p>
+      <hr>
+      <p style = " font-size:0.75em;  color: gray;text-align:justify;">
+        * 이 웹 페이지는 연세대학교 디자인 인텔리전스 데이터 시각화 수업 과제의 일환으로 추가적인 배포나 무단 공유를 금지한다. *
+      <br>** 프로젝트에 사용된 다양한 코드는 코드 보기 페이지에서 상세하게 표기해 두었습니다 **
+      </p>
+      <button type="button" onclick="location.href='project/prj02.html'">1. 코로나 예측</button>
+      <button type="button" onclick="location.href='project/prj02_korea.html'">2. 국내 경제</button>
+      <button type="button" onclick="location.href='project/prj02_foreign.html'">3. 국제 경제</button>
+      <button type="button" onclick="location.href='project/prj02_code.html'">4. 코드 보기</button>
+      <p style = "margin-top: 40px; font-size:1.25em; color:	#000080; font-weight:bolder">
+        | 코로나 사태 발생 후 다섯 달... 과연 국내 경제에는 어떤 영향을 미쳤을까?
+      </p >
+      <div class="row">
+        <div class="col">
+          <p style="text-align:justify">
+            2020년 1월 20일 결국 대한민국에도 신종 코로나 바이러스 첫 확진자가 발생했다.
+          </p>
+          <p style="text-align:justify">중국 우한 지역에서 도시를 폐쇄할 정도로 심각한 전염성을 띄고 있던 이 코로나 바이러스는 전 세계로 퍼져나갔고, 사스나 메르스와 같은 기존의 바이러스와는 다르게 치명률은 높지 않지만 이와 비교할 수 없을 정도로 높은 전파율을 보여주었다. 이로 인해 전 세계는 코로나에 시달리게 되었고, 이는 세계 경제에 큰 타격을 주는 계기가 되었다. <span style="background-color:#CEE3F6"> 대한민국은 K방역으로 국내 코로나 방역을 우수하게 수행하고 있음에도 불구하고, 수출과 수입을 많이하는 중개 무역을 주로 하는 나라이다 보니 이러한 경제 위기를 피해갈 수는 없었다. </span>
+          그렇다면 실질적으로 코로나가 국내 경제에 어떠한 영향을 미쳤을까?
+          </p>
+          <p style = "margin-top: 60px; font-size:1em; color:	#088A4B; font-weight:bolder">
+            1. 금융위기 이후 최악의 국내 총생산 (GDP) 경제 성장률
+          </p >
+          <p style="text-align:justify">
+            국내 총생산 GDP는 상향과 하향 그래프를 그때그떄 그리기는 했지만, 전반적으로 우상향 그래프를 그리는 모습을 보인다. 1997년 1분기 IMF당시 118938원이던 GDP는 2020년 1분기 494101원을 달성하였다. 불과 20년만에 약 4배로 성장한 것이다.
+          </p>
+          <p style="text-align:justify">
+            IMF 당시에는 이러한 분기별 경제 성장률이 -7.3%까지 떨어지는 모습을 보였지만, 1999년 1분기에 다시금 6.8%의 경제 성장률을 보여주면서 플러스 성장률을 회복하였다. 그 후 쭉 오르락 내리락 하면서 플러스 성장세를 보였지만, 2008년 말부터 어려워진 외환 위기로 인해 다시금 1년 가량 분기별 경제 성장률이 마이너스를 기록하게 되었다. 그 후 바로 플러스 성장세로 돌아섰지만, 대한민국의 경제 성장률은 지속적으로 낮아져서 2020년 1분기 1.3%까지 낮아졌다.
+          </p>
+          <p style="text-align:justify">
+            <span style="background-color:#084B8A;color:#FFFFFF; font-weight:bolder">2020년 코로나 발생 전 3~4년 가량 2~3%대의 분기별 경제 성장률을 보여주었던 대한민국은 코로나 발생후 급격하게 하락하여 1.3%의 경제 성장률을 보였다.</span>
+          </p>
+          <div class='tableauPlaceholder' id='viz1592110893645' style='position: relative;margin-bottom: 30px; width: 95%;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;24&#47;24920&#47;1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='24920&#47;1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;24&#47;24920&#47;1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1592110893645');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+          <p style="text-align:justify">
+            이러한 1.3%의 경제 성장률은 코로나 사태 이전 IMF에서 예상한 2.3%보다 1% 포인트 하락한 수치이다. 홍준표 현대경제연구원 연구위원은 "현재 국내 내수 경기는 가계 소득이 감소하고 구매력을 악화시켜 다시 소비 침체를 가속화시키는 ‘소비침체-고용냉각-소비침체’의 악순환 고리가 형성되는 단계"라며 "수출 경기 역시 글로벌 공급망 훼손, 선진 경제권의 수요 절벽 등이 진행되며 부정적인 흐름이 강해지고 있다"고 말하며 <span style="background-color:#CEE3F6"> 상반기 경제 성장률을 -0.9%, 하반기 경제 성장률은 1.4%로 예상되어 올 한해 총 경제 성장률을 0.3%라고 예상했다. </span>
+          </p>
+          <p style = "margin-top: 60px; font-size:1em; color:	#088A4B; font-weight:bolder">
+            2. 집계 이후 최고치를 갱신한 일시 휴직자와 취업 수 감소 수
+          </p >
+          <p style="text-align:justify">
+            국내 실업자 수는 그때 그때의 경제 상황에 따라서 줄었다 늘었다 하는 모습을 지난 10년간 보여왔지만, 전반적으로 꾸준하게 조금씩 늘어나는 모습을 보여주고 있다. 실업률 또한 낮을 때는 2.6%정도를 유지했지만, 지난 10년간 최고치는 5%에 달할정도로 높은 모습을 보였다.
+          </p>
+          <p style="text-align:justify">
+            2020년 1월 코로나 발생 이후 꾸준하게 경제가 좋지 않다는 뉴스가 나오며, 취업 상황또한 역대 최악의 세대라는 말이 나올정도로 안좋은 상황을 보이고 있다. 2020년 4워로가 5월의 실업자 수 격차가 10만명 가량이나 증가하였으며, 실업률 또한 4.2%에서 4.5%로 한달만에 증가하는 모습을 보였다. 이러한 추세라면, 근 10년간 최고치였던 5% 또한 금방 달성할 수 있을 것으로 예상된다.
+          </p>
+          <div class='tableauPlaceholder' id='viz1592110944489' style='position: relative;margin-bottom: 30px; width: 95%;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;1_&#47;1_15921107318750&#47;1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='1_15921107318750&#47;1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;1_&#47;1_15921107318750&#47;1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1592110944489');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          <p style="text-align:justify">
+            신종 코로나바이러스 감염증(코로나19) 사태로 급격히 늘어난 일시 휴직자 또한 다가올 대량 실업사태의 뇌관으로 떠오르고 있다. <span style="background-color:#CEE3F6"> 임시 휴직상태에 들어간 161만명의 일시 휴직자가 코로나19로 인한 경기침체로 직장에 복귀하지 못하고 실업자로 전락할 경우 대량 실업사태가 우려되기 때문이다. 통계청에 따르면 올해 3월 일시 휴직자는 160만7000명으로 전년동월 34만7000명보다 126만명 증가했다. 이는 통계집계 이후 사상 최대 규모이자, 최대 증가폭이다.일시 휴직자의 증가는 코로나19로 어려워진 기업이나 가게들이 직원 감원 대신 임시방편으로 무급휴직이나 유급휴직을 크게 늘렸기 때문이다. 만약에 이 같은 휴직자가 직장에 복귀하지 못했을 경우 대량 실업사태로 이어질 수 있다는 점은 굉장히 큰 문제이다. </span>
+        </div>
+      </div>
+
+      <p>   </p>
+      <hr>
+      <div class="row">
+        <div class="col" style = 'margin-top:0px;'>
+          <p style = 'line-height:22px;text-align:justify;font-size:0.8em; color:	#848484;'>
+            고주희 juheego@yonsei.ac.kr &emsp; 박주은 ella@yonsei.ac.kr &emsp; 이자은 l1064je@yonsei.ac.kr &emsp; 이건희 dymon0912@yonsei.ac.kr
+          </p>
+          <p style = 'line-height:20px;text-align:justify;margin-bottom:30px;'>
+            <저작권자(c) 연세대학교 디자인 인탤리전스, 무단 전재-재배포 금지>2020/06/25 15:00
+          </p>
+        </div>
+      </div>
+  </body>
+</html>

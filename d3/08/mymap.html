@@ -9,7 +9,11 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- 브라우저 탭 상단에 보일 페이지 이름을 넣으세요 -->
-        <title>Title</title>
+        <style media="screen">
+          @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+          html,body {font-family:NanumSquare !important;}
+        </style>
+        <title>Data Visualization</title>
     </head>
 
     <body>
@@ -19,28 +23,44 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="../d3.html">
-                            < D3 과제 페이지로 돌아가기 
-                        </a> 
-                    </li> 
-                </ul> 
-            </div> 
-        </nav> 
+                            < D3 과제 페이지로 돌아가기
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <!-- End of Site Navigation -->
 
         <!-- 과제는 여기서 부터 시작입니다 -->
 
         <!-- Main Container -->
         <div class="container">
-            <div class="row">
-                <div class="col">
-
-
-
-                </div>
+          <div class="row">
+            <div class="col">
+              <h1 style = 'margin-top:50px; margin-bottom:10px; text-align:left; font-size:xx-large;font-weight: bold;font-family:'>
+                전국 도서관 표준 데이터
+              </h1>
             </div>
-        </div>
+          </div>
+          <p style = " font-size:0.75em;  color: gray;">
+            송고시간 | 2020-06-11 15:00
+          </p>
+          <hr>
+
+          <p style = "margin-top: 30px; font-size:1.25em; color:	#000080; font-weight:bolder">
+            | 도서관 이름과 위치 그리고 장서수
+          </p >
+          <p>
+            툴팁에 장서수와 열람석 수를 넣었는데, Export하여 가지고오니 뜨지 않습니다...ㅠㅜ
+          </p>
+          <p>
+            원의 크기는 장서수를 기준으로 분포시켰습니다.
+          </p>
+          <iframe width="1000" height="1500" src="d3/08/kepler.gl.html"></iframe>
+
+          </div>
         <!-- End of Main Container -->
-        
+
 
         <!-- 이 아래부터는 무시하세요! -->
         <!-- Optional JavaScript -->
